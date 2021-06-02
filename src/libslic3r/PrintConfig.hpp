@@ -1216,6 +1216,7 @@ protected:
         OPT_PTR(tool_name);
         OPT_PTR(toolchange_gcode);
         OPT_PTR(travel_speed);
+        OPT_PTR(travel_speed_z);
         OPT_PTR(use_firmware_retraction);
         OPT_PTR(use_relative_e_distances);
         OPT_PTR(use_volumetric_e);

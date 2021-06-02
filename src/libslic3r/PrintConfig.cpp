@@ -4056,6 +4056,18 @@ void PrintConfigDef::init_fff_params()
     def->mode = comAdvanced;
     def->set_default_value(new ConfigOptionFloat(130));
 
+    def = this->add("travel_speed_z", coFloat);
+    def->label = L("Z Travel");
+    def->full_label = L("Z travel speed");
+    def->category = OptionCategory::speed;
+    def->tooltip = L("Speed for movements along the Z axis.\nWhen set to zero, this value "
+                     "is ignored and regular travel speed is used instead.");
+    def->sidetext = L("mm/s");
+    def->aliases = { "travel_feed_rate_z" };
+    def->min = 0;
+    def->mode = comAdvanced;
+    def->set_default_value(new ConfigOptionFloat(0.));
+
     def = this->add("use_firmware_retraction", coBool);
     def->label = L("Use firmware retraction");
     def->category = OptionCategory::general;
